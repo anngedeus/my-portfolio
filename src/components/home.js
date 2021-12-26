@@ -1,70 +1,93 @@
 import React from 'react'
 import {
     Toolbar,
-    Typography,
     makeStyles,
     Grid
 
 } from "@material-ui/core";
 import './styles.css';
-import me from '../images/me.webp';
+import me1 from '../images/me(1).webp';
 import { NavLink } from 'react-router-dom';
-
-console.log(me);
+import {GitHub, LinkedIn } from '@material-ui/icons';
 
 const HomeStyles = makeStyles((theme) => ({
+    message: {
+        marginTop: theme.spacing(-30),
+        marginLeft: theme.spacing(19),
+    },
     welcome: {
-        marginTop: theme.spacing(-20),
-        marginLeft: theme.spacing(20),
-        fontFamily: "Arvo",
+        fontFamily: "Shadows Into Light",
         fontSize: "40px",
         cursor: "pointer",
-        color: "#FFC457"
+        color: "#FFAE00"
     },
     message1: {
-        marginTop: theme.spacing(5),
-        marginLeft: theme.spacing(20),
         fontFamily: "Arvo",
-        fontSize: "20px",
-        cursor: "pointer",
+        fontSize: "15px",
+        fontWeight: "lighter",
     },
     message2: {
-        marginTop: theme.spacing(0),
-        marginLeft: theme.spacing(20),
+        marginTop: "40px",
         fontFamily: "Arvo",
         fontSize: "20px",
-        cursor: "pointer",
-    },
-    image: {
-        width: "500px",
-        height: "500px",
-        marginLeft: theme.spacing(13),
-        marginTop: theme.spacing(10),
-        border: "2px solid",
-        borderColor: "black",
-        borderRadius: "50%",
-        borderWidth: "10px",
+        fontWeight: "bolder",
     },
     about: {
         textDecoration: "none",
         color: "#FF77FF",
-        fontSize: "15px",
+        fontSize: "18px",
         fontFamily: "Arvo",
-        marginLeft: theme.spacing(0),
-        marginTop: theme.spacing(100),
-        borderBottomColor: "black",
+        borderBottomColor: "#FF77FF",
         borderTop: "none",
         borderRight: "none",
         borderLeft: "none",
         border: "2px solid",
-        borderWidth: "2px",
-        borderRadius: "5px",
+        borderWidth: "4px",
         "&:hover": {
-            color: "black",
+            color: "#FF77FF",
+            borderWidth: "9px",
         },
-    },  
+    },
+    image: {
+        width: "450px",
+        height: "450px",
+        marginLeft: theme.spacing(13),
+        marginTop: theme.spacing(-5),
+        border: "2px solid",
+        borderColor: "#BEC9FF",
+        borderRadius: "30%",
+        borderWidth: "5px",
+        display: "flex",
+    },
+    container: {
+        background: "none",
+        marginLeft: theme.spacing(-150.5),
+        marginTop: theme.spacing(70),
+    },
+    social: {
+       background: "none",
+       marginLeft: "0px",
+       marginTop: "5px",
+       margin: "0 2rem",
+       display: "inline-block",
+       color: "black",
+       transform: "scale(1.5)",
+       "&:hover": {
+        color: "black",
+        transform: "scale(2.0)",
+        },
+    },
+    connect: {
+        fontSize: "25px",
+        fontFamily: "Arvo",
+        fontWeight: "bolder",
+    },
+    email: {
+        fontSize: "15px",
+        fontFamily: "Arvo",
+        fontWeight: "lighter",
+    }
 }));
-
 
 export default function home() {
 
@@ -72,16 +95,28 @@ const classes = HomeStyles();
 
     return (
         <Toolbar>
-            <Typography>
-                <Grid className={classes.welcome}>Hello, I'm Ann-Kareen!</Grid>
-                <Grid className={classes.message1}>A second-year computer science student attending the University of Florida. I'm passionate about creating Human-centered designs and exploring the world of IoT.</Grid>
-                <Grid className={classes.message2}>
+            <div className={classes.message}>
+                <h1 className={classes.welcome}>Hello, I'm Ann-Kareen!</h1>
+                <h2 className={classes.message1}>A second-year computer science student attending the University of Florida.</h2>
+                <h2 className={classes.message1}>I'm passionate about creating Human-centered designs and exploring the world of IoT.</h2>
+                <h2 className={classes.message2}>
                     <NavLink to="about" className={classes.about}>
                         Learn more about me
                     </NavLink>
-                </Grid>
-            </Typography>
-            <img src={me} alt="image" className={classes.image}/>
+                </h2>
+            </div>
+            <div><img src={me1} alt="" className={classes.image}/></div>
+            <div className={classes.container}>
+                <h3 className={classes.connect}>Let's Connect </h3>
+                <h3 className={classes.email}>akgedeus@gmail.com</h3>
+                <a href="https://www.linkedin.com/in/ann-kareen-gedeus/" rel="noopener noreferrer" target="_blank" className={classes.social}>
+                    <LinkedIn/>
+                </a>
+                <a href="https://github.com/anngedeus" rel="noopener noreferrer" target="_blank" className={classes.social}>
+                    <GitHub/>
+                </a>
+                <Grid></Grid>
+            </div>
         </Toolbar>
     )
 }

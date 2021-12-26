@@ -3,6 +3,7 @@ import {
     Toolbar,
     Typography,
     makeStyles,
+    AppBar,
 
 } from "@material-ui/core";
 import './styles.css';
@@ -10,7 +11,7 @@ import { NavLink } from 'react-router-dom'
 
 const UseStyles = makeStyles((theme) => ({
     navlinks: {
-      marginLeft: theme.spacing(-60),
+      marginLeft: theme.spacing(-70),
       display: "flex",
     },
     linkcustom: {
@@ -20,8 +21,10 @@ const UseStyles = makeStyles((theme) => ({
         fontFamily: "Arvo",
         marginLeft: theme.spacing(5),
         "&:hover": {
-            color: "#00FF00",
+            color: "#2EC400",
+            transform: "scale(1.1)",
         },
+        display: "flex",
     },
     name: {
         color: "black",
@@ -30,6 +33,10 @@ const UseStyles = makeStyles((theme) => ({
         flexGrow: "1",
         cursor: "pointer",
         marginLeft: theme.spacing(15),
+        display: "flex",
+    },
+    appBar: {
+        background: "none"
     },
 }));
 
@@ -38,9 +45,10 @@ export default function navbar() {
 const classes = UseStyles();
 
     return (
+        <AppBar className={classes.appBar} elevation={0}>
         <Toolbar>
             <Typography className={classes.name}>
-                <NavLink to="/" exact  className={classes.linkcustom}>Ann-Kareen Gedeus</NavLink>
+                <div><NavLink to="/" exact  className={classes.linkcustom}>Ann-Kareen Gedeus</NavLink></div>
             </Typography>
             <Typography>
                 <div className={classes.navlinks}>
@@ -59,5 +67,6 @@ const classes = UseStyles();
                 </div>
             </Typography>
         </Toolbar>
+        </AppBar>
     )
 }

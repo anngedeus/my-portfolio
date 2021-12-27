@@ -1,4 +1,3 @@
-import React from 'react'
 import {
     Toolbar,
     makeStyles,
@@ -36,7 +35,7 @@ const AboutStyles = makeStyles((theme) => ({
     }
 }));
 
-export default function about() {
+export default function About() {
 
     const classes = AboutStyles();
 

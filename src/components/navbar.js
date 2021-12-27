@@ -38,7 +38,7 @@ const UseStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function navbar() {
+export default function Navbar() {
 
 const classes = UseStyles();
 
@@ -53,13 +53,13 @@ const classes = UseStyles();
                     <NavLink to="/" exact className={classes.linkcustom} fontSize="15px">
                         Home
                     </NavLink>
-                    <NavLink to="about" className={classes.linkcustom} fontSize="15px">
+                    <NavLink to="About" className={classes.linkcustom} fontSize="15px">
                         About Me
                     </NavLink>
-                    <NavLink to="project" className={classes.linkcustom} fontSize="15px">
+                    <NavLink to="Project" className={classes.linkcustom} fontSize="15px">
                         Projects
                     </NavLink>
-                    <NavLink to="resume" className={classes.linkcustom} fontSize="15px">
+                    <NavLink to="Resume" className={classes.linkcustom} fontSize="15px">
                         Resume
                     </NavLink>
                 </div>

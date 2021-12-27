@@ -8,6 +8,8 @@ import {
 import me1 from '../media/me(1).png';
 import { NavLink } from 'react-router-dom';
 import {GitHub, LinkedIn } from '@material-ui/icons';
+import { init } from 'ityped';
+import { useEffect, useRef } from 'react';
 
 
 const HomeStyles = makeStyles((theme) => ({
@@ -16,10 +18,16 @@ const HomeStyles = makeStyles((theme) => ({
         marginLeft: theme.spacing(19),
     },
     welcome: {
-        fontFamily: "Shadows Into Light",
-        fontSize: "40px",
+        fontFamily: "Arvo",
+        fontSize: "30px",
         cursor: "pointer",
-        color: "#FFAE00"
+        color: "black"
+    },
+    name: {
+        color: "#FFAE00",
+        fontFamily: "Shadows Into Light",
+        fontSize: "45px",
+        cursor: "pointer",
     },
     message1: {
         fontFamily: "Arvo",
@@ -63,7 +71,7 @@ const HomeStyles = makeStyles((theme) => ({
     },
     container: {
         background: "none",
-        marginLeft: theme.spacing(-150.5),
+        marginLeft: theme.spacing(-160),
         marginTop: theme.spacing(70),
     },
     social: {
@@ -88,17 +96,27 @@ const HomeStyles = makeStyles((theme) => ({
         fontSize: "15px",
         fontFamily: "Arvo",
         fontWeight: "lighter",
-    }
+    },
 }));
 
-export default function home() {
+export default function Home() {
 
-const classes = HomeStyles();
+    const classes = HomeStyles();
+
+    const textRef = useRef();
+    
+    useEffect(() =>{
+        init(textRef.current, { 
+            showCursor: false,
+            backDelay: 1500,
+            backSpeed: 60,
+            strings: ["Ann-Kareen!", "Ann!"] })
+    },[])
 
     return (
         <Toolbar>
             <div className={classes.message}>
-                <h1 className={classes.welcome}>Hello, I'm Ann-Kareen!</h1>
+                <h1><span className={classes.welcome}>Hello, I'm  </span><span ref={textRef} className={classes.name}></span></h1>
                 <h2 className={classes.message1}>A second-year computer science student attending the University of Florida.</h2>
                 <h2 className={classes.message1}>I'm passionate about creating Human-centered designs and exploring the world of IoT.</h2>
                 <h2 className={classes.message2}>

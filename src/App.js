@@ -1,9 +1,9 @@
 import {BrowserRouter, Route, Switch} from "react-router-dom"
-import home from "./components/home"
-import about from "./components/about"
-import resume from "./components/resume"
-import project from "./components/projects"
-import NavBar from "./components/navbar"
+import home from "./components/Home"
+import about from "./components/About"
+import resume from "./components/Resume"
+import project from "./components/Projects"
+import NavBar from "./components/Navbar"
 import "./App.css"
 
 
@@ -15,9 +15,9 @@ function App() {
     <div className="Sections">
       <Switch>
         <Route component={home} path='/' exact/>
-        <Route component={about} path='/about' />
-        <Route component={resume} path='/resume' />
-        <Route component={project} path='/project' />
+        <Route component={about} path='/About' />
+        <Route component={resume} path='/Resume' />
+        <Route component={project} path='/Project' />
       </Switch>
       </div>
     </BrowserRouter>

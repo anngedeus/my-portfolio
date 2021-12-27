@@ -5,10 +5,10 @@ import {
     Grid
 
 } from "@material-ui/core";
-import './styles.css';
-import me1 from '../images/me(1).webp';
+import me1 from '../media/me(1).png';
 import { NavLink } from 'react-router-dom';
 import {GitHub, LinkedIn } from '@material-ui/icons';
+
 
 const HomeStyles = makeStyles((theme) => ({
     message: {
@@ -49,15 +49,17 @@ const HomeStyles = makeStyles((theme) => ({
         },
     },
     image: {
-        width: "450px",
-        height: "450px",
-        marginLeft: theme.spacing(13),
+        width: "600px",
+        height: "600px",
+        overflow: "hidden",
+        marginLeft: theme.spacing(5),
         marginTop: theme.spacing(-5),
-        border: "2px solid",
-        borderColor: "#BEC9FF",
-        borderRadius: "30%",
-        borderWidth: "5px",
+        background: "#BEC9FF",
+        borderRadius: "50%",
         display: "flex",
+        alignItems: "flex-end",
+        justifyContent: "center",
+        float: "right",
     },
     container: {
         background: "none",
@@ -105,7 +107,7 @@ const classes = HomeStyles();
                     </NavLink>
                 </h2>
             </div>
-            <div><img src={me1} alt="" className={classes.image}/></div>
+            <div className={classes.image}><img src={me1} alt="" width="100%" height="100%" justifyContent="center"/></div>
             <div className={classes.container}>
                 <h3 className={classes.connect}>Let's Connect </h3>
                 <h3 className={classes.email}>akgedeus@gmail.com</h3>

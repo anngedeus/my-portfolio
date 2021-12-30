@@ -2,8 +2,7 @@ import React from 'react'
 import {
     Toolbar,
     makeStyles,
-    Grid
-
+    Typography,
 } from "@material-ui/core";
 import me1 from '../media/me(1).png';
 import { NavLink } from 'react-router-dom';
@@ -116,14 +115,16 @@ export default function Home() {
     return (
         <Toolbar>
             <div className={classes.message}>
-                <h1><span className={classes.welcome}>Hello, I'm  </span><span ref={textRef} className={classes.name}></span></h1>
-                <h2 className={classes.message1}>A second-year computer science student attending the University of Florida.</h2>
-                <h2 className={classes.message1}>I'm passionate about creating Human-centered designs and exploring the world of IoT.</h2>
-                <h2 className={classes.message2}>
-                    <NavLink to="about" className={classes.about}>
-                        Learn more about me
-                    </NavLink>
-                </h2>
+                <Typography>
+                    <h1><span className={classes.welcome}>Hello, I'm  </span><span ref={textRef} className={classes.name}></span></h1>
+                    <h2 className={classes.message1}>A second-year computer science student attending the University of Florida.</h2>
+                    <h2 className={classes.message1}>I'm passionate about creating Human-centered designs and exploring the world of IoT.</h2>
+                    <h2 className={classes.message2}>
+                        <NavLink to="about" className={classes.about}>
+                            Learn more about me
+                        </NavLink>
+                    </h2>
+                </Typography>
             </div>
             <div className={classes.image}><img src={me1} alt="" width="100%" height="100%" justifyContent="center"/></div>
             <div className={classes.container}>
@@ -135,7 +136,7 @@ export default function Home() {
                 <a href="https://github.com/anngedeus" rel="noopener noreferrer" target="_blank" className={classes.social}>
                     <GitHub/>
                 </a>
-                <Grid></Grid>
+                <br></br>
             </div>
         </Toolbar>
     )

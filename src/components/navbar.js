@@ -14,9 +14,9 @@ const UseStyles = makeStyles((theme) => ({
       display: "flex",
     },
     linkcustom: {
+        fontFamily: "Arvo",
         textDecoration: "none",
         color: "black",
-        fontFamily: "Arvo",
         marginLeft: theme.spacing(5),
         "&:hover": {
             color: "#2EC400",
@@ -26,7 +26,7 @@ const UseStyles = makeStyles((theme) => ({
     name: {
         color: "black",
         fontSize: "20px",
-        fontFamily: "Arvo",
+        fontFamily: "Shadows Into Light",
         fontWeight: "bolder",
         flexGrow: "1",
         cursor: "pointer",

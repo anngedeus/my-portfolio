@@ -24,6 +24,7 @@
     "react-native": "^0.66.4",
     "react-native-web": "^0.17.5",
     "react-pdf": "^5.6.0",
+    "react-pptx": "^2.14.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "5.0.0",
     "styled-components": "^5.3.3",
@@ -55,5 +56,17 @@
   },
   "devDependencies": {
     "webpack": "^5.65.0"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anngedeus/my-portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anngedeus/my-portfolio/issues"
+  },
+  "homepage": "https://github.com/anngedeus/my-portfolio#readme"
 }
